@@ -1,0 +1,38 @@
+index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ruleta</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎡 Mi ruleta</h1>
+  <p>Pulsa el botón para girar</p>
+  <button onclick="girar()">Girar</button>
+
+  <h2 id="resultado"></h2>
+
+  <script>
+    const premios = ["🍕 Pizza", "🎮 Juego", "😂 Nada", "🍫 Chocolate"];
+
+    function girar() {
+      const random = Math.floor(Math.random() * premios.length);
+      document.getElementById("resultado").innerText =
+        "Te tocó: " + premios[random];
+    }
+  </script>
+</body>
+</html>
